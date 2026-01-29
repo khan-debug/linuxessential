@@ -1,3 +1,11 @@
 sudo dnf install tlp
 
-sudo ln -s ~/linuxessential/tlp.conf /etc/tlp.conf
+
+git clonehttps://github.com/khan-debug/conf-files.git
+cd conf-files
+
+sudo mv tlp.conf /etc/tlp.conf
+cd ..
+rm -rf conf-files
+
+

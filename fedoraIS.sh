@@ -9,7 +9,14 @@ sudo dnf install rpmfusion-\*-appstream-data -y
 sudo dnf group install multimedia -y
 
 
-sudo rm -rf /etc/dnf/dnf.conf && sudo ln -s ~/linuxessential/dnf.conf /etc/dnf/dnf.conf
+sudo rm -rf /etc/dnf/dnf.conf
+
+git clone https://github.com/khan-debug/conf-files.git
+cd conf-files
+
+sudo mv dnf.conf /etc/dnf/dnf.conf
+cd ..
+rm -rf conf-files
 
 
 sudo dnf update -y
